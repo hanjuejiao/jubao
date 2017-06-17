@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="关键词" />
+    <meta name="description" content="描述" />
+    <link type="text/css" rel="stylesheet" href="css/index.css">
+    <link type="text/css" rel="stylesheet" href="css/base.css">
+    <!--[if IE 7]>
+    <link type="text/css" rel="stylesheet" href="css/ie7.css" />
+    <![Endif]-->
+    <title>署名举报</title>
+</head>
+<body style="background: url('images/body2bg.jpg') repeat;">
+<!--头部-->
+<div class="top">
+    <div class="toper"><img src="images/logo.png"></div>
+</div>
+<!--头部-->
+<!--导航-->
+<div class="nav1">
+    <ul>
+        <li class="on">网上举报平台</li>
+        <li class="on1"><a href="/jubao/lawlist.html">相关法律法规</a><em></em></li>
+        <li class="on2"><a href="/jubao/read.html">网上举报须知</a></li>
+    </ul>
+</div>
+<!--导航-->
+<div class="jcont">
+    <div class="shum">
+        <img src="images/shuming.jpg">
+        <span>注意：标有<em> *</em> 的必须填写</span>
+
+    </div>
+    <form action="" method="post" id="form1">
+        <div class="f1">
+            <h4>举报人信息</h4>
+            <div class="jbxx clearfix">
+                <div class="jbx1 fl">
+                    <span>姓名：</span><input type="text" name="user_name" ><em>*</em>
+                </div>
+                <div class="jbx1 fl">
+                    <span>身份证号：</span><input type="text" name="user_idcard" ><em>*</em>
+                </div>
+            </div>
+            <div class="jbxx jbxxx clearfix">
+                <div class="jbx1 fl">
+                    <span>联系方式：</span><input type="text" name="user_phone" ><em>*</em>
+                </div>
+                <div class="jbx1 fl">
+                    <span>政治面貌：</span>
+                    <select name="user_zz">
+                        <option value="">请选择</option>
+						<option value="中国共产党党员">中国共产党党员</option>
+						<option value="中共预备党员">中共预备党员</option>
+						<option value="共青团员">共青团员</option>
+						<option value="民族党派人士">民族党派人士</option>
+						<option value="无党派民主人士">无党派民主人士</option>
+						<option value="群众">群众</option>		
+                    </select>
+                </div>
+            </div>
+            <div class="jbxx clearfix">
+                <div class="jbx1 fl">
+                    <span>现居住地址：</span><input type="text" name="user_dizhi" ><em>*</em>
+                </div>
+                <div class="jbx1 fl">
+                    <span>级别：</span>
+                    <select name="user_jb">
+                        <option value="">请选择</option>
+						<option value="正省部级">正省部级</option>
+						<option value="副省部级">副省部级</option>
+						<option value="正厅局级">正厅局级</option>
+						<option value="副厅局级">副厅局级</option>
+						<option value="正县处级">正县处级</option>
+						<option value="副县处级">副县处级</option>
+						<option value="正乡科级">正乡科级</option>
+						<option value="副乡科级">副乡科级</option>
+						<option value="一般干部">一般干部</option>
+						<option value="其他">其他</option>
+                    </select>
+                </div>
+            </div>
+            <div class="zy"><span>注意：标有 <em>*</em> 的必须填写</span></div>
+            <h4>被举报人（单位）信息</h4>
+            <div class="jbxx clearfix">
+                <div class="jbx1 fl">
+                    <span>被举报人：</span><input type="text" name="report_name" ><em>*</em>
+                </div>
+                <div class="jbx1 fl">
+                    <span>单位：</span><input type="text" name="report_dw">
+                </div>
+            </div>
+            <div class="jbxx jbxxx clearfix">
+                <div class="jbx1 fl">
+                    <span>职务：</span><input type="text" name="report_zw">
+                </div>
+                <div class="jbx1 fl">
+                    <span>级别：</span>
+                    <select name="report_jb">
+                        <option value="">请选择</option>
+						<option value="正省部级">正省部级</option>
+						<option value="副省部级">副省部级</option>
+						<option value="正厅局级">正厅局级</option>
+						<option value="副厅局级">副厅局级</option>
+						<option value="正县处级">正县处级</option>
+						<option value="副县处级">副县处级</option>
+						<option value="正乡科级">正乡科级</option>
+						<option value="副乡科级">副乡科级</option>
+						<option value="一般干部">一般干部</option>
+						<option value="其他">其他</option>
+                    </select>
+                </div>
+            </div>
+            <div class="zy"><span>注意：标有 <em>*</em> 的必须填写</span></div>
+            <h4>举报正文</h4>
+            <div class="jbxx">
+                <div class="jbx1  jbx2" >
+                    <span>标题：</span><input type="text" name="title"><em>*</em>
+                </div>
+        </div>
+            <div class="jbxx jbxxx ">
+                <div class="jbx1 jbx2" id="question1">
+                    <span>问题类别：</span>
+                    <select name="question1">
+                    </select>
+                    <em>*</em>
+                </div>
+            </div>
+            <div class="jbxx">
+                <div class="jbx1 jbx2" id="question2">
+                    <span>问题细类：</span>
+                    <select name="question2">
+                    <option value="">请选择</option>
+                    </select>
+                    <em>*</em>
+                </div>
+            </div>
+            <div class="jbxxx jbtxt">
+                <span>主要问题：</span>
+                <textarea name="content"></textarea>
+                <em>*</em>
+                <i>还可输入3000字</i>
+            </div>
+            <div class="uploadfile">
+                <div class="uptop">上传附件</div>
+                <div class="jbxx">
+                    <div class="jbx1 jbx2 clearfix">
+                        <span class="fl">附件：</span>
+                        <div class="file fl"><img src="images/xzbtn.png" /> <input  type="file" name="uploadfile" id="uploadfile"/></div>
+                    <em class="fr">温馨提示：最多可同时上传 5 个文件，每个文件只允许上传2 M 大小。 附件仅限于文件名后缀为.jpg、.png、.gif、.bmp、.jpeg、.tiff、.svg的文件，禁止exe、bat等格式文件上传! </em>
+                        <input type="hidden" name="files" id="files" />
+                        <input type="hidden" name="filename" id="filename"/>
+                   </div>
+                </div>
+                <div class="uploadlist">
+                        <!--<p>附件文件名1.jpg<em></em></p>-->
+                        <!--<p>附件文件名2.jpg<em></em></p>-->
+                        <!--<p>附件文件名3.jpg<em></em></p>-->
+                        <!--<p>附件文件名1.jpg<em></em></p>-->
+
+                 </div>
+                <div class="yztext clearfix">
+                    <div class="label fl">验证码：</div>
+                    <input type="text" class="yzm fl" name="yzm" />
+                    <div class="yzmimg fl"><img src="" /><span>*</span></div>
+                    <div class="yzmtext fl">看不清，请点击图片（区分大小写） </div>
+                </div>
+            </div>
+            <div class="buttt">
+                <input type="submit" value="确认提交" style="background: url('images/butbg1.jpg') no-repeat left center";>
+                <input type="reset" value="取消重填" style="background: url('images/butbg1-02.jpg') no-repeat left center";>
+            </div>
+
+    </div>
+    </form>
+</div>
+
+<!--轮播图-->
+
+<div class="foot">
+    <p><span>版权所有：中共湖北省纪委驻省公安厅纪检组</span>     地址：湖北省武汉市洪山区雄楚大道181号</p>
+</div>
+
+<!--JS-->
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>
+<script type="text/javascript" src="js/upload.js"></script>
+<script type="text/javascript">
+
+    var myReg = /^[\u4e00-\u9fa5]+$/;//中文
+    var empReg=/\S/;//空
+    var IDReg=/(^\d{15}$)|(^\d{18}$)|(^\d{17}(\d|X|x)$)/;//身份证
+    var phoReg=/^1\d{10}$/;//手机号
+    var addReg=/^(?=.*?[\u4E00-\u9FA5])[\dA-Za-z\u4E00-\u9FA5]+/;//地址
+    //姓名
+    function check() {
+
+        if ($("input[name=user_name]").val() == "" || !empReg.test($("input[name=user_name]").val())) {
+            alert("举报人姓名不能为空");
+            return false;
+        }
+        else if (!myReg.test($("input[name=user_name]").val())) {
+            alert("举报人姓名应输入中文");
+            return false;
+        }
+        //身份证
+        else if ($("input[name=user_idcard]").val() == "" || !empReg.test($("input[name=user_idcard]").val())) {
+            alert("举报人身份证号不能为空");
+            return false;
+        }
+        else if (!IDReg.test($("input[name=user_idcard]").val())) {
+            alert("举报人身份证号不合法");
+            return false;
+        }
+
+        //手机号
+        else if($("input[name=user_phone]").val()==""||!empReg.test($("input[name=user_phone]").val()))
+        {
+            alert("举报人手机号不能为空");
+            return false;
+        }
+        else if (!phoReg.test($("input[name=user_phone]").val())) {
+            alert("举报人手机号不合法");
+            return false;
+        }
+        //地址
+        else if (!addReg.test($("input[name=user_dizhi]").val())) {
+            alert("举报人地址不合法");
+            return false;
+        }        
+        //被举报人
+        else if ($("input[name=report_name]").val() == "" || !empReg.test($("input[name=report_name]").val())) {
+            alert("被举报人姓名不能为空");
+            return false;
+        }
+        else if (!myReg.test($("input[name=report_name]").val())) {
+            alert("被举报人姓名应输入中文");
+            return false;
+        }
+
+        //标题
+        else if ($("input[name=title]").val() == "" || !empReg.test($("input[name=title]").val())) {
+            alert("标题不能为空");
+            return false;
+        }
+        //问题类别
+        else if ($("select[name=question1]").val() == "" || !empReg.test($("select[name=question1]").val())) {
+            alert("问题类别不能为空");
+            return false;
+        }
+
+        //问题细类
+        else if ($("select[name=question2]").val() == "" || !empReg.test($("select[name=question2]").val())) {
+            alert("问题细类不能为空");
+            return false;
+        }
+        //主要问题
+        else if ($("textarea[name=content]").val() == "" || !empReg.test($("textarea[name=content]").val())) {
+            alert("主要问题不能为空");
+            return false;
+        }
+        //验证码
+        else if($("input[name=yzm]").val() == "" || !empReg.test($("input[name=yzm]").val())){
+            alert("验证码不能为空");
+            return false;
+        }
+        else return true;
+    }
+
+    //表单
+    $('#form1').submit(function(){
+        var len = $('.uploadlist p').length;
+        var str,file;
+        var strTmp = [],
+                fileTmp = [];
+        for(var i=0;i<len;i++){
+//            str = str+','+$('.uploadlist p').eq(i).attr('val');
+//            file = file+','+$('.uploadlist p').eq(i).attr('name');
+            strTmp.push($('.uploadlist p').eq(i).attr('val'));
+            fileTmp.push($('.uploadlist p').eq(i).attr('name'));
+        }
+        str = strTmp.join(',');
+        file = fileTmp.join(',');
+        $('#files').val(str);
+        $('#filename').val(file);
+        var content = $('textarea[name=content]').val();
+        if(content.length>3000){
+            alert('问题内容最多输入3000字');return false;
+        }
+        //alert(file);return false;
+        var url = '/jubao/jubaoManage/UploadReportSignature.do';
+        if(check()){
+            $.ajax({
+                type:'post',
+                data:$('#form1').serialize(),
+                url:url,
+                //async:false,
+                dataType:'json',
+                success:function(res){
+                    if(res.status=="error"){
+                        alert(res.error);return false;
+                    }else{
+                        alert(res.status);
+                        window.parent.location.href= '/jubao/lawlist.html';
+                    }
+                }
+
+            })
+        }
+        return false;
+    });
+  //初始化问题大类
+    function InitProblem(){
+    	$.ajax({
+    		type : 'post',
+    		data : 'catname=问题类别',
+    		url:'/jubao/jubaoManage/GetCategory.do',
+    		success: function(r){
+    			
+    			  if(r.length>0){
+    	              var str = '<option value="">请选择</option>';
+    	              var strTmp = [];
+    	              for(var i=0;i<r.length;i++){
+    	                  //str+='<option value="'+r[i].id+'">'+r[i].title+'</option>';
+    	                  strTmp[i]='<option value="'+r[i].catid+'">'+r[i].catname+'</option>';
+    	              }
+    	              str += strTmp.join('');
+    	              $('#question1 select').html(str);
+    	          }
+    			
+    		},
+    		error: function(data){
+    			alert('获取数据失败');
+    		}
+    	})
+    }
+    InitProblem();
+    //问题细类
+    $('#question1 select').change(function(){
+        var q1 = $(this).val();
+        $.ajax({
+            type:'post',
+            data:'catid='+q1,
+            url:'/jubao/jubaoManage/GetCategory2.do',
+            async:false,
+            dataType:'json',
+            success:function(r){
+                if(r.length>=0){
+                    var str = '';
+                    str+='<option value="">请选择</option>';
+                    for(var i=0;i<r.length;i++){
+                        str+='<option value="'+r[i].id+'">'+r[i].title+'</option>';
+                    }
+                    $('#question2 select').html(str);
+                }
+            }
+
+        })
+        return false;
+    })
+//判断上传文件是否达到5个
+    $("#uploadfile").live('change',function(){
+        var num = $('.uploadlist p').length;
+        if(num>=5){
+            alert('附件最多上传5个');return false;
+        }else{
+            file_upload();
+        }
+    });
+  //缩略图上传
+    function file_upload(){
+        ajaxFileUpload({
+            url:'/jubao/jubaoManage/UploadFile.do',
+            id:'uploadfile',
+            callback:function(){
+                var res = $.parseJSON(this.responseText);
+                if(typeof(res)==="object"){
+                    $('.uploadlist').append('<p val="'+res.save+'" name="'+res.filename+'">'+res.filename+'<em onclick="delfile(this);"></em></p>');
+                }else{
+                    alert(res);
+                }
+            }
+        });
+    }
+    //删除上传附件
+    function delfile(obj){
+        var idx = $(obj).index('.uploadlist em');
+        $(obj).parent().remove();
+    }
+  //点击换一张链接时换一张图片验证码
+    $(".yzmimg img").click(function(){
+    	getImg();
+    })
+    //获取验证码
+    function getImg(){
+        $.ajax({
+            url: "/jubao/jubaoManage/GetCheckCode.do",
+            type: "Post",
+            success: function (data) {
+                $(".yzmimg img").attr('src',data);
+            }
+        })
+    }
+    getImg();
+    //点击换一张链接时换一张图片验证码
+    $(".yzmimg img").click(function(){
+        getImg();
+    })
+
+    jQuery(".cont1").slide({mainCell:".hd ul",titCell:".bd li",effect:"leftLoop",autoPlay:true});
+
+    jQuery(".cont3l").slide({mainCell:".hm ul",titCell:".ht li ",effect:"left"});
+
+    $(function(){
+
+
+        $(".cont3l").find(".ht li").hover(function(){
+            $(this).find("p").show();
+            $(this).siblings("li").find("p").hide();
+
+        });
+
+
+    })
+</script>
+
+<!--JS-->
+</body>
+</html>

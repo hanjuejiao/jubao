@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="关键词" />
+    <meta name="description" content="描述" />
+    <link type="text/css" rel="stylesheet" href="css/index.css">
+    <link type="text/css" rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/pageCode.css" />
+    <!--[if IE 7]>
+    <link type="text/css" rel="stylesheet" href="css/ie7.css" />
+    <![Endif]-->
+    <title>标题</title>
+</head>
+<body style="background: url('images/body2bg.jpg') repeat;">
+<!--头部-->
+<div class="top">
+    <div class="toper"><img src="images/logo.png"></div>
+</div>
+<!--头部-->
+<!--导航-->
+<div class="nav1">
+    <ul>
+        <li class="on">网上举报平台</li>
+        <li class="on2"><a href="/jubao/lawlist.html">相关法律法规</a><em></em></li>
+        <li class="on1"><a href="/jubao/read.html">网上举报须知</a></li>
+    </ul>
+</div>
+<!--导航-->
+<div class="jcont">
+     <div class="flfgtop"><h3>相关法律法规</h3></div>
+     <div class="flfgmid" id="flfgmid">
+         <ul id="lidata">
+             <!--<li><a href="#">中华人民共和国宪法（节选） </a> </li>-->
+             <!--<li><a href="#">中国共产党章程（节选） </a> </li>-->
+             <!--<li><a href="#">中国共产党党员权利保障条例  </a> </li>-->
+             <!--<li><a href="#">国共产党党内监督条例（试行）（节选）  </a> </li>-->
+             <!--<li><a href="#">中国共产党纪律处分条例 中国共产党纪律检查机关控告申诉工作条例 </a> </li>-->
+             <!--<li><a href="#">中央纪委监察部关于保护检举控告人的规定 中华人民共和国行政监察法 </a> </li>-->
+             <!--<li><a href="#">中华人民共和国行政监察法实施条例 信访条例 </a> </li>-->
+             <!--<li><a href="#">全国人民代表大会常务委员会关于维护互联网安全的决定  </a> </li>-->
+         </ul>
+     </div>
+    <div class="page" id="page" style="text-align: center;">
+        <div class="tcdPageCode">
+        </div>
+        <!--<a href="#" id="firstpage" onclick="goPage(1,8)">首页</a>-->
+        <!--<a href="#" id="prepage">上一页</a>-->
+        <!--<span onclick="goPage(1,8)">1</span>-->
+        <!--&lt;!&ndash;<a href="#">2</a>&ndash;&gt;-->
+        <!--&lt;!&ndash;<a href="#">3</a>&ndash;&gt;-->
+        <!--<a href="#" id="nextpage">下一页</a>-->
+        <!--<a href="#" id="lastpage">尾页</a>-->
+    </div>
+    <a href="/jubao/read.html" class="wyjb"><img src="images/wyjbbtn.png" /> </a>
+</div>
+
+<!--轮播图-->
+
+<div class="foot">
+    <p><span>版权所有：中共湖北省纪委驻省公安厅纪检组</span>     地址：湖北省武汉市洪山区雄楚大道181号</p>
+</div>
+
+<!--JS-->
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>
+<script src="js/jquery.page.js"></script>
+<script type="text/javascript">
+    var perCount = 8;
+    var obj;
+    var totalPage;
+
+    function initPagination() {
+        $.ajax({
+            url: "/jubao/LawManage/getListLaw.do",
+            type: "Post",
+            dataType:'json',
+            data : "page="+ 1+"&rows="+8,
+            success: function (data) {
+                var pageNum = Math.ceil(data.total/perCount)
+                renderList(1);
+                $(".tcdPageCode").createPage({
+                    pageCount:pageNum,
+                    current:1,
+                    backFn:function(p){
+                        console.log(p);
+                        renderList(p);
+                    }
+                });
+            }
+        })
+    }
+    function renderList(page) {
+        $.ajax({
+            url: "/jubao/LawManage/getListLaw.do",
+            type: "Post",
+            data: "page="+ page+"&rows="+8,
+            dataType:'json',
+            success: function (data) {
+                $("#flfgmid").empty();
+                $("#flfgmid").append("<ul></ul>");
+                for (var i = 0; i <= data.data.length - 1; i++) {
+                    var title=data.data[i].title;
+                    var id=data.data[i].id;
+                        $("#flfgmid ul").append("<li><a href=\"lawdata.html?id="+id+"\" onclick=\"detailnews("+id+")\">" + title + "</a></li>");
+                }
+            }
+        })
+    }
+    initPagination();
+ 
+
+    jQuery(".cont1").slide({mainCell:".hd ul",titCell:".bd li",effect:"leftLoop",autoPlay:true});
+
+    jQuery(".cont3l").slide({mainCell:".hm ul",titCell:".ht li ",effect:"left"});
+
+    $(function(){
+
+
+        $(".cont3l").find(".ht li").hover(function(){
+            $(this).find("p").show();
+            $(this).siblings("li").find("p").hide();
+
+        });
+
+
+    })
+</script>
+
+<!--JS-->
+</body>
+</html>

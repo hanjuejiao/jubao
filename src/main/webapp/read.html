@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="关键词" />
+    <meta name="description" content="描述" />
+    <link type="text/css" rel="stylesheet" href="css/index.css">
+    <link type="text/css" rel="stylesheet" href="css/base.css">
+    <!--[if IE 7]>
+    <link type="text/css" rel="stylesheet" href="css/ie7.css" />
+    <![Endif]-->
+    <title>网上举报须知</title>
+</head>
+<body style="background: url('images/body2bg.jpg') repeat;">
+<!--头部-->
+<div class="top">
+    <div class="toper"><img src="images/logo.png"></div>
+</div>
+<!--头部-->
+<!--导航-->
+<div class="nav1">
+    <ul>
+        <li class="on">网上举报平台</li>
+        <li class="on1"><a href="/jubao/lawlist.html">相关法律法规</a><em></em></li>
+        <li class="on2"><a href="/jubao/read.html">网上举报须知</a></li>
+    </ul>
+</div>
+<!--导航-->
+<div class="jcont">
+    <div class="jbtz">
+        <h2>网上举报须知：</h2>
+        <p>一、中共湖北省纪委驻省公安厅纪检组受理信访举报范围：</p>
+        <p>1、省公安厅及直属单位党组织和党员的检举、控告；</p>
+        <p>2、省公安厅及直属单位党组织和党员不服处分的申诉；</p>
+        <p>3、加强省公安厅党风廉政建设和反腐败工作以及对驻省公安厅纪检组工作的意见和建议。</p>
+        <p>二、举报人对举报事实的真实性负责。对于借举报捏造事实、诬告陷害的，依照有关规定严肃处理；涉嫌犯罪的，移送司法机关依法处理。</p>
+        <p>三、纪检监察机关提倡实名举报（请填写真实姓名、身份证号、家庭或工作单位以及准确联系方式等内容）。</p>
+        <p>四、来信、来访地址：湖北省武汉市洪山区雄楚大道181号中共湖北省公安厅驻厅纪检组，邮编：430070。</p>
+    </div>
+    <div class="chec"> <input type="checkbox" name="yuedu" disabled="disabled"><span>我已阅读以上条款</span><em id="jsTime">（还剩 5 秒阅读完毕）</em></div>
+    <div class="butt">
+        <a href="/jubao/signature.html" id="smjb" style="background: url('images/smjb.png') no-repeat center;"></a>
+        <a href="/jubao/anonymous.html" id="nmjb" style="background: url('images/nmjb.png') no-repeat center;"></a>
+
+    </div>
+
+</div>
+
+<!--轮播图-->
+
+<div class="foot">
+    <p><span>版权所有：中共湖北省纪委驻省公安厅纪检组</span>     地址：湖北省武汉市洪山区雄楚大道181号</p>
+</div>
+
+
+
+
+
+
+
+
+<!--JS-->
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>
+<script type="text/javascript">
+var t = 5;
+function showTime(){  
+    if(t==0){ 
+		$('input[name=yuedu]').attr('disabled',false);
+    } else{
+		t -= 1;  
+	}
+	$('#jsTime').html('（还剩 '+t+' 秒阅读完毕）');
+    //每秒执行一次,showTime()  
+    setTimeout("showTime()",1000);  
+}  
+showTime();
+$('#smjb').click(function(){
+	if($('input[name=yuedu]').is(':checked')){
+		//window.location.href="/index.php?m=Jubao&a=smjbfrom";
+	}else{
+		alert('请先阅读举报须知');return false;
+	}
+})
+$('#nmjb').click(function(){
+	if($('input[name=yuedu]').is(':checked')){
+		//window.location.href="/index.php?m=Jubao&a=nmjbfrom";
+	}else{
+		alert('请先阅读举报须知');return false;
+	}
+})
+</script>
+<script type="text/javascript">
+
+
+
+    jQuery(".cont1").slide({mainCell:".hd ul",titCell:".bd li",effect:"leftLoop",autoPlay:true});
+
+    jQuery(".cont3l").slide({mainCell:".hm ul",titCell:".ht li ",effect:"left"});
+
+    $(function(){
+
+
+        $(".cont3l").find(".ht li").hover(function(){
+            $(this).find("p").show();
+            $(this).siblings("li").find("p").hide();
+
+        });
+
+
+    })
+</script>
+
+<!--JS-->
+</body>
+</html>

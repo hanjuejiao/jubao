@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="关键词" />
+    <meta name="description" content="描述" />
+    <link type="text/css" rel="stylesheet" href="css/index.css">
+    <link type="text/css" rel="stylesheet" href="css/base.css">
+    <!--[if IE 7]>
+    <link type="text/css" rel="stylesheet" href="css/ie7.css" />
+    <![Endif]-->
+    <title>标题</title>
+</head>
+<body>
+<!--头部-->
+<div class="top">
+    <div class="toper"><img src="images/logo.png"></div>
+</div>
+<!--头部-->
+<!--导航-->
+<div class="nav1">
+    <ul>
+        <li class="on">网上举报平台</li>
+        <li class="on1"><a href="/jubao/lawlist.html">相关法律法规</a><em></em></li>
+        <li class="on2"><a href="/jubao/read.html">网上举报须知</a></li>
+    </ul>
+</div>
+<!--导航-->
+<div class="content1 clearfix">
+    <div class="new fl">
+    <!--<h2>首页 &gt; 高层声音</h2>-->
+    <div class="news" id="news">
+        <h3>
+            <p id="lawtitle"></p>
+            <span id="title1"></span>
+        </h3>
+        <div class="text" id="content">
+        </div>
+    </div>
+  </div>
+    <div class="fc fr">
+        <div class="fctop"><img src="images/fctop.jpg" /> </div>
+        <ul>
+            <li class="big-font"><em></em><span>大号字体</span></li>
+            <li class="small-font"><em></em><span>小号字体</span></li>
+            <li class="normal-font on"><em></em><span>默认字体</span></li>
+        </ul>
+    </div>
+
+</div>
+<div class="foot">
+    <p><span>版权所有：中共湖北省纪委驻省公安厅纪检组</span>     地址：湖北省武汉市洪山区雄楚大道181号</p>
+</div>
+
+
+
+<!--JS-->
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>
+<script type="text/javascript" src="js/base.js"></script>
+<script type="text/javascript">
+
+</script>
+<script>
+    window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"share":{},"image":{"viewList":["qzone","tsina","tqq","renren","weixin"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin"]}};
+    with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+
+    if(location.href.indexOf("?") == -1){
+        // alert("请输入查询条件！")
+    }else{
+        var searchParam = location.href.split("?")[1];
+        console.log(searchParam);
+        var param1 = (decodeURI(searchParam.split("&")[0])).split("=")[1];
+        console.log(param1);
+    }
+    $.ajax({
+        url: "/jubao/LawManage/GetSingleLawData.do",
+//        "/jubao/LawManage/GetSingleLawData.do",///jubao/LawManage/getListLaw.do
+        type: "Post",
+        data: {"id":param1},
+        dataType:'json',
+        success: function(data) {
+            $("#lawtitle").text(data.law.title);
+            $("#title1").text("发布时间：2017-03-12<em>来源：新华社</em>阅读次数："+data.law.dayviews+"");
+            $("#content").empty();
+            $("#content").html(data.lawdata.content);
+        },
+        error: function() {
+        }
+    });
+</script>
+
+
+<!--JS-->
+</body>
+</html>
